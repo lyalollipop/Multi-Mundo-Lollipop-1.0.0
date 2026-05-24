@@ -1,0 +1,64 @@
+  📘 Manual do Usuário: LollipopMultiWorlds
+Este plugin foi criado para proporcionar controle total sobre a criação de mundos, sistema de teletransporte (warps) e gerenciamento de permissões por mundo em servidores Minecraft.
+
+
+
+
+  🛠️ Comandos de Administração (Exigem OP ou Permissão lollipop.admin)
+/gerar <tipo> <nome> <tamanho>
+
+Função: Cria um novo mundo do zero.
+
+Detalhes: O <tipo> define a geração (ex: plano ou normal). O <nome> será a pasta do mundo e o <tamanho> define a borda (WorldBorder) em blocos.
+
+Exemplo: /gerar plano minigame 1000
+
+/setwarp <nome> <item>
+
+Função: Define um ponto de teletransporte na sua localização atual.
+
+Detalhes: O <nome> é o rótulo da warp. O <item> define o ícone que aparecerá no menu gráfico (ex: DIAMOND_SWORD, ENDER_PEARL).
+
+/attnether
+
+Função: Reset completo do mundo do Nether.
+
+Detalhes: Descarrega o mundo, deleta a pasta física e permite que o servidor gere um novo na próxima carga.
+
+/attend
+
+Função: Reset completo do mundo do The End.
+
+Detalhes: Remove o mundo do End atual para regeneração completa (útil para limpar estruturas antigas).
+
+/mw block <nome_do_mundo>
+
+Função: Desativa as funcionalidades deste plugin em um mundo específico.
+
+Detalhes: Coloca o mundo em uma "lista negra", ignorando qualquer evento do plugin nele.
+
+/mw unblock <nome_do_mundo>
+
+Função: Reativa as funcionalidades do plugin em um mundo bloqueado.
+
+Detalhes: Remove o mundo da lista negra, restaurando as operações normais do plugin.
+
+  
+  👤 Comando de Jogador (Geral)
+/warp
+
+Função: Abre o menu de teletransporte.
+
+Detalhes: Interface gráfica (GUI) que lista todas as warps salvas com /setwarp. Basta clicar no item para ser teleportado instantaneamente para o destino.
+
+
+
+
+
+
+  📝 Resumo de Permissões e Configuração
+Permissão Geral: A maioria dos comandos de administração utiliza a permissão lollipop.admin. Recomenda-se o uso do LuckPerms para delegar esses poderes aos seus moderadores ou administradores com segurança.
+
+Segurança: Comandos como /attnether, /attend e /mw block realizam alterações permanentes nos arquivos do servidor. Recomenda-se cuidado redobrado na concessão dessas permissões.
+
+Arquivo de Configuração: O plugin gera automaticamente o arquivo warps.yml para gerenciar os teletransportes. Não é necessário editar este arquivo manualmente.
